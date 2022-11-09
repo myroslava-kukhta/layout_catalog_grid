@@ -1,29 +1,30 @@
+$card-width: 200px;
+$border-color: #ccc;
+
 .catalog {
   display: grid;
   justify-content: center;
   gap: 48px;
-  max-width: 944px;
-  margin: 0 auto;
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+  }
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
-  }
-
-  &__card {
-    width: 200px;
-    height: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 48px;
-    text-align: center;
-    line-height: 300px;
+    grid-template-columns: repeat(4, $card-width);
   }
 }
